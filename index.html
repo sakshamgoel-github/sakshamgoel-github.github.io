@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saksham Goel</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/1cb304090b.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav class="nav-bar">
+      <img src="images/logo.png" class="logo" />
+      <ul id="sidemenu">
+        <li><a href="#header">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+      </ul>
+      <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+    </nav>
+    
+      <div id="header">
+        <div class="container">
+          <div class="header-text">
+            <div class="header-text-item1">
+              <p>Full Stack Web Developer</p>
+              <h1>
+                Hello World,<br/> I'm Saksham Goel<br/>
+                from India
+              </h1>
+            </div>
+            <div class="header-text-item2">
+              <img src="images/background.png" alt="Saksham Goel" width="500" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+      <div id="about">
+        <div class="container">
+          <div class="row">
+            <div>
+              <h1 class="sub-title" style="margin-bottom: 10px">About Me</h1>
+              <p>
+                Hello there! I'm delighted to introduce myself to you. I am a
+                passionate computer science engineer. I find great joy and
+                satisfaction in exploring the fascinating realms of technology.
+                I pursued a degree in Computer Science Engineering, fueling my
+                curiosity and enabling me to delve into the world of algorithms,
+                software development, and problem-solving. Apart from my
+                technical pursuits, I am an ardent fan of the legendary football
+                player, CR7 and always keep a close eye on Ronaldo's incredible
+                achievements on the field.
+              </p>
+
+              <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('skills')">
+                  Skills
+                </p>
+                <p class="tab-links" onclick="opentab('education')">
+                  Education
+                </p>
+              </div>
+              <div class="tab-contents active-tab" id="skills">
+                <ul>
+                  <li>
+                    <span style="font-size: 23px">Programming Languages</span
+                    ><br />C/C++, Python, JavaScript
+                  </li>
+                  <li>
+                    <span style="font-size: 23px">Web Technologies</span
+                    ><br />ReactJs/Reduxtoolkit, NodeJs, Express
+                  </li>
+                  <li>
+                    <span style="font-size: 23px">DataBase Management</span
+                    ><br />MySQL, MongoDB, FireBase
+                  </li>
+                  <li>
+                    <span style="font-size: 23px">Operating Systems</span
+                    ><br />Linux, Windows
+                  </li>
+                  <li>
+                    <span style="font-size: 23px">Miscellaneous</span
+                    ><br />Bash, Git, VsCode
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-contents" id="education">
+                <ul>
+                  <li>
+                    <span style="font-size: 23px"
+                      >BTech Computer Science(2020 - Current)</span
+                    ><br />Indian Institute of Information Technology Pune
+                  </li>
+                  <li>
+                    <span style="font-size: 23px"
+                      >Sr. Secondary School (2017-2019)</span
+                    ><br />Kendriya Vidyalaya
+                  </li>
+                  <li>
+                    <span style="font-size: 23px"
+                      >Secondary School (2015-2017)</span
+                    ><br />Kendriya Vidyalaya
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div id="projects" style="margin-top: 100px; margin-bottom: 50px">
+        <div class="container">
+          <h1 class="sub-title">Projects</h1>
+          <div class="work-list">
+            <div class="work">
+              <h3>Trekking Website</h3>
+              <p>
+                It is a web application where users can browse and review
+                campgrounds. This project was built using Node.js, Express,
+                MongoDB, and Bootstrap..
+              </p>
+              <div class="layer">
+                <a href="https://github.com/sakshamgoel-github/trekking-website"
+                  ><i class="fa-solid fa-up-right-from-square"></i
+                ></a>
+              </div>
+            </div>
+            <div class="work">
+              <h3>Message Spam Detection</h3>
+              <p>
+                It is used for detecting spam messages using the ML algorithm
+                multinomial naive bayes.
+              </p>
+              <div class="layer">
+                <a href="https://github.com/sakshamgoel-github/message-spam-detection"
+                  ><i class="fa-solid fa-up-right-from-square"></i
+                ></a>
+              </div>
+            </div>
+            <div class="work">
+              <h3>Blogging Website</h3>
+              <p>
+                This is a simple React-Redux application that allows users to
+                perform CRUD operations on blog posts. The application uses
+                Redux Toolkit for state management and json-server as a mock
+                API..
+              </p>
+              <div class="layer">
+                <a href="https://github.com/sakshamgoel-github/blog-app"
+                  ><i class="fa-solid fa-up-right-from-square"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div style="margin-top: 100px" id="contact">
+        <div class="container contact-info">
+          <h1 class="sub-title">Contact Me</h1>
+          <p>
+            <i class="fa-sharp fa-solid fa-envelope"></i
+            >goelsaksham88@gmail.com
+          </p>
+          <p><i class="fa-solid fa-phone"></i>+91-8437557767</p>
+          <div class="social-icons">
+            <a href="https://www.linkedin.com/in/saksham-goel-b3b001250/"
+              ><i class="fa-brands fa-linkedin"></i> LinkedIn</a
+            ><br />
+            <a href="https://github.com/sakshamgoel-github"
+              ><i class="fa-brands fa-github"></i> Github</a
+            ><br />
+            <a href="https://www.instagram.com/_miserable.me_/"
+              ><i class="fa-brands fa-square-instagram"></i> Instagram</a
+            ><br />
+            <a
+              href="https://drive.google.com/file/d/1bcYJxAFJOiJsoZnK49YZ1bRVt1z5maE7/view"
+              ><i class="fa-solid fa-file"></i> Resume</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <p>
+          <i class="fa-sharp fa-solid fa-quote-left"></i> Before software should
+          be reusable, it should be usable.
+          <i class="fa-sharp fa-solid fa-quote-right"></i>
+        </p>
+    </div>
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+
+    <script>
+      var sidemenu = document.getElementById("sidemenu");
+
+      function openmenu() {
+        console.log(sidemenu);
+        sidemenu.style.right = "0px";
+      }
+
+      function closemenu() {
+        sidemenu.style.right = "-200px";
+      }
+    </script>
+  </body>
+</html>
