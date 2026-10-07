@@ -1,0 +1,587 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Saksham Goel | Portfolio</title>
+    <meta
+      name="description"
+      content="Saksham Goel, M.Tech Computer Science at IIT (BHU) Varanasi. NLP, LLM pipelines, machine learning and full-stack projects."
+    />
+    <meta property="og:title" content="Saksham Goel | Portfolio" />
+    <meta
+      property="og:description"
+      content="M.Tech Computer Science at IIT (BHU) Varanasi. NLP, LLMs, machine learning, algorithms and chess."
+    />
+    <meta property="og:type" content="website" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%84%3C/text%3E%3C/svg%3E"
+    />
+    <style>
+      :root {
+        --bg: #ecebe6;
+        --paper: #fff;
+        --fg: #111;
+        --mut: #555;
+        --link: #0b3d91;
+        --rule: #222;
+        --box: #f4f4f0;
+        box-sizing: border-box;
+        padding-top: env(safe-area-inset-top, 0px);
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+      }
+      :root[data-theme="dark"] {
+        --bg: #101012;
+        --paper: #1b1b1f;
+        --fg: #e8e6dc;
+        --mut: #a9a9a0;
+        --link: #8ab4ff;
+        --rule: #777;
+        --box: #242428;
+      }
+      html {
+        scroll-padding-top: env(safe-area-inset-top, 0px);
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--fg);
+        font:
+          16px/1.5 "Latin Modern Roman",
+          "CMU Serif",
+          "Computer Modern",
+          Georgia,
+          "Times New Roman",
+          serif;
+      }
+      a {
+        color: var(--link);
+      }
+      .page {
+        max-width: 860px;
+        margin: 24px auto;
+        background: var(--paper);
+        padding: 48px 56px;
+        border: 1px solid var(--rule);
+        box-shadow: 3px 3px 0 var(--rule);
+      }
+      .arx {
+        font:
+          12px/1.3 Arial,
+          Helvetica,
+          sans-serif;
+        color: var(--mut);
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--rule);
+        padding-bottom: 6px;
+        margin-bottom: 28px;
+      }
+      h1 {
+        font-size: 28px;
+        text-align: center;
+        margin: 0 0 14px;
+        line-height: 1.2;
+        font-weight: bold;
+      }
+      .au {
+        text-align: center;
+        font-size: 18px;
+        margin: 0;
+      }
+      .af {
+        text-align: center;
+        color: var(--mut);
+        font-size: 14px;
+        margin: 2px 0 22px;
+      }
+      .abs {
+        margin: 0 auto 20px;
+        max-width: 640px;
+        font-size: 15px;
+        text-align: justify;
+      }
+      .abs b {
+        display: block;
+        text-align: center;
+      }
+      .kw {
+        max-width: 640px;
+        margin: 0 auto 24px;
+        font-size: 14px;
+      }
+      hr {
+        border: 0;
+        border-top: 1px solid var(--rule);
+        margin: 0 0 20px;
+      }
+      .cols {
+        column-count: 2;
+        column-gap: 32px;
+        text-align: justify;
+        hyphens: auto;
+        font-size: 15px;
+      }
+      .cols h2 {
+        font-size: 16px;
+        margin: 18px 0 6px;
+        column-span: none;
+        break-after: avoid;
+      }
+      .cols h2:first-child {
+        margin-top: 0;
+      }
+      .cols p {
+        margin: 0 0 8px;
+      }
+      .cols ul {
+        margin: 0 0 8px;
+        padding-left: 18px;
+      }
+      .cols li {
+        margin: 0 0 4px;
+      }
+      .cols table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 13px;
+        margin: 6px 0 4px;
+        border-top: 2px solid var(--rule);
+        border-bottom: 2px solid var(--rule);
+      }
+      .cols th {
+        border-bottom: 1px solid var(--rule);
+        text-align: left;
+        padding: 3px 4px;
+      }
+      .cols td {
+        padding: 3px 4px;
+        vertical-align: top;
+      }
+      .cap {
+        font-size: 13px;
+        margin: 0 0 12px;
+        text-align: justify;
+      }
+      .refs {
+        font-size: 14px;
+        margin-top: 8px;
+      }
+      .bar {
+        display: flex;
+        gap: 10px;
+        margin-top: 22px;
+        border-top: 1px solid var(--rule);
+        padding-top: 10px;
+        flex-wrap: wrap;
+      }
+      button {
+        font:
+          13px Arial,
+          Helvetica,
+          sans-serif;
+        padding: 4px 12px;
+        border: 1px solid var(--rule);
+        background: var(--box);
+        color: var(--fg);
+        cursor: pointer;
+      }
+      pre {
+        display: none;
+        background: var(--box);
+        border: 1px solid var(--rule);
+        padding: 10px;
+        font-size: 12px;
+        overflow-x: auto;
+        margin: 10px 0 0;
+      }
+      :focus-visible {
+        outline: 2px solid var(--link);
+        outline-offset: 2px;
+      }
+      @media (max-width: 700px) {
+        .page {
+          padding: 24px 18px;
+          margin: 0;
+          border-width: 0 0 1px;
+          box-shadow: none;
+        }
+        .cols {
+          column-count: 1;
+        }
+        h1 {
+          font-size: 22px;
+        }
+      }
+
+      /* Latin Modern Roman (optional): put the .woff2 files in a "fonts" folder next to this file.
+   If they are missing, the browser quietly falls back to Georgia/Times. */
+      @font-face {
+        font-family: "Latin Modern Roman";
+        src:
+          local("Latin Modern Roman"),
+          url("fonts/lmroman10-regular-webfont.woff") format("woff");
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Latin Modern Roman";
+        src:
+          local("Latin Modern Roman Bold"),
+          url("fonts/lmroman10-bold-webfont.woff") format("woff");
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Latin Modern Roman";
+        src:
+          local("Latin Modern Roman Italic"),
+          url("fonts/lmroman10-italic-webfont.woff") format("woff");
+        font-weight: 400;
+        font-style: italic;
+        font-display: swap;
+      }
+      .cols p,
+      .cols li,
+      .abs {
+        text-wrap: pretty;
+      }
+      a {
+        text-underline-offset: 2px;
+        text-decoration-thickness: 1px;
+      }
+      ::selection {
+        background: #cfd8ee;
+        color: #000;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+      }
+      a.btn {
+        font:
+          13px Arial,
+          Helvetica,
+          sans-serif;
+        padding: 4px 12px;
+        border: 1px solid var(--rule);
+        background: var(--box);
+        color: var(--fg);
+        text-decoration: none;
+      }
+      @media print {
+        body {
+          background: #fff;
+          color: #000;
+        }
+        .page {
+          background: #fff;
+          box-shadow: none;
+          border: 0;
+          margin: 0;
+          padding: 0;
+          max-width: none;
+        }
+        .bar {
+          display: none;
+        }
+        .cols {
+          font-size: 11pt;
+        }
+        a {
+          color: #000;
+          text-decoration: none;
+        }
+        h2,
+        table {
+          break-inside: avoid;
+        }
+      }
+      .figure {
+        margin: 0 0 14px;
+        text-align: center;
+        break-inside: avoid;
+      }
+      .figure img {
+        display: block;
+        margin: 0 auto 6px;
+        width: 100%;
+        max-width: 140px; /* was 220px */
+        height: auto;
+        aspect-ratio: 4/5;
+        object-fit: cover;
+        border: 1px solid var(--rule);
+      }
+      .ph {
+        margin: 0 auto 6px;
+        width: 100%;
+        max-width: 140px;
+        aspect-ratio: 4/5;
+        border: 1px dashed var(--rule);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--mut);
+        font-size: 13px;
+        background: var(--box);
+      }
+      .ph[hidden] {
+        display: none;
+      }
+      .cols .figure + h2 {
+        margin-top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <article class="page">
+      <div class="arx">
+        <span>arXiv:2610.00001 [cs.PF]</span
+        ><span>Last updated: 8 Oct 2026</span>
+      </div>
+      <h1>
+        Saksham Goel: Training a Computer Scientist on Algorithms, Machine
+        Learning and Chess
+      </h1>
+      <p class="au">Saksham Goel</p>
+      <p class="af">
+        Department of Computer Science, IIT (BHU) Varanasi<br /><a
+          href="mailto:goelsaksham88@gmail.com"
+          >goelsaksham88@gmail.com</a
+        >
+        |
+        <a href="https://linkedin.com/in/saksham-goel-b3b001250">LinkedIn</a> |
+        <a href="https://github.com/sakshamgoel-github">GitHub</a> |
+        <a href="https://leetcode.com/u/binary_C0der/">LeetCode</a>
+      </p>
+
+      <div class="abs">
+        <b>Abstract</b>I am an M.Tech student in computer science with interests
+        in machine learning, NLP and LLM-based systems. I built an end-to-end
+        query classification and information extraction pipeline during my
+        internship at Wipro, a stroke prediction framework, a full-stack
+        expense-sharing application and a spam detector. I ranked in the 99.77th
+        percentile in GATE (CS) 2025 and solved over 500 LeetCode problems. I
+        report a current CGPA of 8.68 at IIT (BHU), and the results of the next
+        semester are still being collected.
+      </div>
+      <p class="kw">
+        <b>Keywords:</b> NLP, LLMs, clustering, full-stack development,
+        algorithms, chess
+      </p>
+      <hr />
+
+      <h2>1 Introduction</h2>
+      <div class="cols">
+        <figure class="figure">
+          <img
+            id="photo"
+            src="saksham.png"
+            alt="Photograph of Saksham Goel"
+            width="140"
+            height="175"
+          />
+          <div id="ph" class="ph" hidden>Photo: add saksham.jpg</div>
+          <figcaption class="cap">
+            <b>Figure 1:</b> Saksham Goel, M.Tech student, IIT (BHU) Varanasi.
+          </figcaption>
+        </figure>
+        <p>
+          This page presents my academic background, experience, projects and
+          achievements in the format of a short paper. Section 2 covers
+          education, Section 3 covers experience, Section 4 covers projects,
+          Section 5 covers skills and Section 6 covers achievements. Section 7
+          concludes.
+        </p>
+
+        <h2>2 Background</h2>
+        <table>
+          <tr>
+            <th>Degree</th>
+            <th>Institute</th>
+            <th>Score</th>
+            <th>Years</th>
+          </tr>
+          <tr>
+            <td>M.Tech, CS</td>
+            <td>IIT (BHU) Varanasi</td>
+            <td>8.68*</td>
+            <td>2025 to now</td>
+          </tr>
+          <tr>
+            <td>B.Tech, CS</td>
+            <td>IIIT Pune</td>
+            <td>7.29</td>
+            <td>2020 to 2024</td>
+          </tr>
+          <tr>
+            <td>Senior Sec.</td>
+            <td>CBSE</td>
+            <td>93.0%</td>
+            <td>2019</td>
+          </tr>
+          <tr>
+            <td>Secondary</td>
+            <td>CBSE</td>
+            <td>10.0</td>
+            <td>2017</td>
+          </tr>
+        </table>
+        <p class="cap">Table 1: Educational history. *Current CGPA.</p>
+        <p>
+          <b>Courses.</b> Algorithms and Data Structures, Operating Systems,
+          Database Management System, Machine Learning, Artificial Intelligence,
+          Linear Algebra, Probability Theory and Random Processes, Discrete
+          Mathematics.
+        </p>
+
+        <h2>3 Experience</h2>
+        <p>
+          <b>Native AI Intern, Wipro Limited, Noida (June to July 2026).</b>
+        </p>
+        <ul>
+          <li>
+            Built an end-to-end query classification pipeline for unlabelled
+            customer letters, using Qwen3-0.6B embeddings and clustering
+            (HDBSCAN, Agglomerative, IDEC) to discover query categories.
+          </li>
+          <li>
+            Applied c-TF-IDF and KeyNMF for topic assignment and
+            pseudo-labelling. This produced a labelled dataset for supervised
+            classification and an inference pipeline returning Top-3 categories
+            with confidence scores.
+          </li>
+          <li>
+            Built an AWS Nova LLM extraction pipeline with query-specific JSON
+            schemas, chosen by predicted class, to turn unstructured letters
+            into structured JSON.
+          </li>
+          <li>
+            Integrated both stages into one NLP/LLM workflow for automated
+            categorization and extraction.
+          </li>
+        </ul>
+
+        <h2>4 Projects</h2>
+        <p>
+          <b>4.1 Stroke Prediction</b> (Aug to Nov 2025, group project,
+          <a href="https://github.com/sakshamgoel-github/Stroke-Prediction"
+            >code</a
+          >). An integrated framework combining preprocessing, association rule
+          mining, outlier detection and Random Forest classification. Apriori
+          and Local Outlier Factor exposed frequent patterns and anomalous
+          patient profiles. SMOTE handled class imbalance, improving recall for
+          high-risk cases.
+        </p>
+        <p>
+          <b>4.2 Divide Xpert</b> (Jul to Aug 2023, individual project,
+          <a href="https://github.com/sakshamgoel-github/divide-Xpert">code</a>,
+          <a href="https://dividexpert.netlify.app/#">demo</a>). A full-stack
+          expense-sharing app with group creation, user management and
+          simplified bill settlement. React, Bootstrap and JWT authentication on
+          a Node.js and Express.js backend with MongoDB. A Priority Queue
+          algorithm reduces the number of final transactions.
+        </p>
+        <p>
+          <b>4.3 Message Spam Detector</b> (Dec 2022, ML lab,
+          <a href="https://github.com/sakshamgoel-github/message-spam-detection"
+            >code</a
+          >). Python pipeline with label encoding, Porter stemming and TF-IDF,
+          classified with Multinomial Naive Bayes at over 95% accuracy.
+        </p>
+
+        <h2>5 Technical Skills</h2>
+        <table>
+          <tr>
+            <th>Category</th>
+            <th>Tools</th>
+          </tr>
+          <tr>
+            <td>Languages</td>
+            <td>C++, Python, JavaScript</td>
+          </tr>
+          <tr>
+            <td>Data science</td>
+            <td>Pandas, NumPy</td>
+          </tr>
+          <tr>
+            <td>Web</td>
+            <td>NodeJS, ExpressJS, MongoDB</td>
+          </tr>
+          <tr>
+            <td>Tools</td>
+            <td>Git, VS Code, Linux</td>
+          </tr>
+        </table>
+        <p class="cap">Table 2: Technical skills.</p>
+
+        <h2>6 Results and Achievements</h2>
+        <ul>
+          <li>
+            <b>GATE (CS) 2025:</b> 99.77 percentile among 170,000 candidates.
+          </li>
+          <li>
+            <b>JEE Mains 2020:</b> 98.17 percentile among 1 million candidates.
+          </li>
+          <li>
+            <b>LeetCode:</b> over 500 data structures and algorithms problems
+            solved.
+          </li>
+          <li>
+            <b>Chess:</b> official FIDE rating since December 2016, earned at a
+            tournament by the Chandigarh Chess Association.
+          </li>
+        </ul>
+
+        <h2>7 Conclusion</h2>
+        <p>
+          The author is open to internships and research collaborations. He is
+          also open to playing chess: challenge him on Chess.com as
+          <a
+            href="https://www.chess.com/member/virtual-me"
+            target="_blank"
+            rel="noopener"
+            >virtual-me</a
+          >. Future work includes a publications list, which currently remains
+          empty.
+        </p>
+
+        <h2>Acknowledgements</h2>
+        <p>The author thanks Reviewer #2 for the helpful comments.</p>
+      </div>
+
+      <div class="bar">
+        <a class="btn" href="Saksham_Resume.pdf" target="_blank" rel="noopener"
+          >Resume</a
+        ><button id="theme" type="button">Toggle dark</button>
+      </div>
+    </article>
+    <script>
+      (function () {
+        var r = document.documentElement;
+        document.getElementById("theme").onclick = function () {
+          var d = r.getAttribute("data-theme") === "dark";
+          r.setAttribute("data-theme", d ? "light" : "dark");
+        };
+        var im = document.getElementById("photo");
+        im.onerror = function () {
+          im.hidden = true;
+          document.getElementById("ph").hidden = false;
+        };
+      })();
+    </script>
+  </body>
+</html>
